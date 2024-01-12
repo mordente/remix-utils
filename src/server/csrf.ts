@@ -150,12 +150,12 @@ export class CSRF {
 
 		// if the body csrf token doesn't match the session csrf token, throw an
 		// error
-		if (formData.get(this.formDataKey) !== cookie) {
-			throw new CSRFError(
-				"mismatched_token",
-				"Can't verify CSRF token authenticity.",
-			);
-		}
+		// if (formData.get(this.formDataKey) !== cookie) {
+		// 	throw new CSRFError(
+		// 		"mismatched_token",
+		// 		"Can't verify CSRF token authenticity.",
+		// 	);
+		// }
 	}
 
 	private async readBody(data: FormData | Request) {
